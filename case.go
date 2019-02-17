@@ -112,7 +112,7 @@ func (b CaseBuilder) When(when interface{}, then interface{}) CaseBuilder {
 	return builder.Append(b, "WhenParts", newWhenPart(when, then)).(CaseBuilder)
 }
 
-// What sets optional "ELSE ..." part for CASE construct
+// Else: What sets optional "ELSE ..." part for CASE construct
 func (b CaseBuilder) Else(expr interface{}) CaseBuilder {
 	return builder.Set(b, "Else", newPart(expr)).(CaseBuilder)
 }
